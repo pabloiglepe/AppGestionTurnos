@@ -30,16 +30,16 @@ function MyCalendar() {
     const cambiarHoraInicio = (valor: string) => {
         setHoraInicio(valor);
 
-        const nuevaHoraFin = dayjs(`2025-01-01T${valor}`).add(3, 'hour').format('H:mm');
+        const nuevaHoraFin = dayjs(`2025-01-01T${valor}`).add(3, 'hour').format('HH:mm');
 
         setHoraFin(nuevaHoraFin);
     }
 
     const manejadorSlot = ({ start }: SlotInfo) => {
 
-        const momentoActual = dayjs().format('H:mm');
+        const momentoActual = dayjs().format('HH:mm');
 
-        const tresHorasDespues = dayjs().add(3, 'hour').format('H:mm');
+        const tresHorasDespues = dayjs().add(3, 'hour').format('HH:mm');
 
         setHoraInicio(momentoActual);
         setHoraFin(tresHorasDespues);
