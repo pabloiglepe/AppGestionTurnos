@@ -3,7 +3,7 @@ import { Calendar, dayjsLocalizer, type SlotInfo } from 'react-big-calendar';
 import dayjs from 'dayjs'
 import 'dayjs/locale/es';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import type { EstadoModal, Turnos } from '../interfaces/types';
+import type { EstadoModal, Turnos } from '../interfaces/Types';
 
 
 // Localizador Day.js
