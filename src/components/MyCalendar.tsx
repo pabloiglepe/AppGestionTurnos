@@ -27,7 +27,6 @@ function MyCalendar() {
     const [horaFin, setHoraFin] = useState('');
 
 
-
     const cambiarHoraInicio = (valor: string) => {
         setHoraInicio(valor);
 
@@ -36,7 +35,7 @@ function MyCalendar() {
         setHoraFin(nuevaHoraFin);
     }
 
-    const manejadorSlotSeleccionado = ({ start }: SlotInfo) => {
+    const manejadorSlot = ({ start }: SlotInfo) => {
 
         const momentoActual = dayjs().format('H:mm');
 
@@ -80,7 +79,7 @@ function MyCalendar() {
                     selectable
                     startAccessor="inicio"
                     endAccessor="fin"
-                    onSelectSlot={manejadorSlotSeleccionado}
+                    onSelectSlot={manejadorSlot}
                     messages={{
                         allDay: 'Todo el día',
                         previous: 'Anterior',
